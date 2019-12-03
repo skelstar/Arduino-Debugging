@@ -21,7 +21,7 @@
 #endif
 
 #ifndef PRINTSTREAM_FALLBACK
-#include <PrintStream.h>
+//#include <PrintStream.h>
 #else
 #include <Arduino.h> // Print
 typedef Print &manipulator(Print &);
