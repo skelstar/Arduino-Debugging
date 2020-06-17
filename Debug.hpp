@@ -106,6 +106,12 @@ using std::uppercase;
 
 #define DEBUGVAL(...) DEBUGVALN(COUNT(__VA_ARGS__))(__VA_ARGS__)
 
+#define DEBUGMVAL(msg, ...)                   \
+  {                                           \
+    Serial.printf("%s: ", (const char *)msg); \
+    DEBUGVAL(__VA_ARGS__);                    \
+  }
+
 #define COUNT(...) COUNT_HELPER(__VA_ARGS__, 10, 9, 8, 7, 6, 5, 4, 3, 2, 1)
 #define COUNT_HELPER(N1, N2, N3, N4, N5, N6, N7, N8, N9, N10, N, ...) N
 
